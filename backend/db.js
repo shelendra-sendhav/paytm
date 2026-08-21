@@ -1,9 +1,9 @@
+require("dotenv").config();
 const mongoose = require("mongoose");
 
 mongoose
   .connect(
-    process.env.MONGODB_URI ||
-      "mongodb+srv://shelensinghsendhav:zdt2PjcAP7U5pvGS@cluster0.clsxeds.mongodb.net/paytm",
+    process.env.MONGODB_URI 
   )
   .catch((error) => {
     console.error(`MongoDB connection failed: ${error.message}`);
